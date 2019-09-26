@@ -29,7 +29,7 @@
 
 		<!--		validate seno start -->
 		<article class="article-box">
-			<form action="" method="POST">
+			<form action="javascript:;" method="POST">
 				<section class="form-row">
 					<label for="map">Enter Map or cap seno</label><input type="text" id="map" name="map">
 				</section>
@@ -40,8 +40,8 @@
 					</div>
 				</section>
 				<section class="form-row">
-					<button class="btn-default">Validate</button>
-					<button class="btn-default"> Reset</button>
+					<button class="btn-default" data-message="This is for validate seno list button">Validate</button>
+					<button class="btn-default"  data-message="This is for reset seno list button"> Reset</button>
 				</section>
 			</form>
 		</article>
@@ -49,22 +49,13 @@
 
 		<!--		state,city filter start -->
 		<article class="article-box">
-			<form action="" method="POST">
+			<form action="javascript" method="POST">
 				<section class="form-row">
 					<label for="map">Filter By </label>
-					<select class="select-box">
-						<option value="state">State</option>
-						<option value="city">City</option>
+					<select class="select-box select-box-first">
 					</select>
 					<label for="citylist">=</label>
-					<select class="select-box">
-						<option value="gurugram">Gurugram</option>
-						<option value="faridabbad">Faridabad</option>
-						<option value="rohtak">Rohtak</option>
-						<option value="panipat">Panipat</option>
-						<option value="karnal">Karnal</option>
-						<option value="rewari">Rewari</option>
-						<option value="sonipat">Sonipat</option>
+					<select class="select-box formSelect select-box-second">
 					</select>
 				</section>
 			</form>
@@ -82,6 +73,7 @@
 					<header class="table-heading">
 						<h3>Available Seno</h3>
 					</header>
+					<div class="overflow-x-auto">
 					<table class="table">
 						<thead>
 							<tr>
@@ -92,32 +84,10 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td><input type="checkbox"></td>
-								<td>Memo</td>
-								<td>Thaught Works Seno</td>
-								<td>75485</td>
-							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>Memo</td>
-								<td>Thaught Works Seno</td>
-								<td>75485</td>
-							</tr>
-							<tr>
-								<td><input type="checkbox"></td>
-								<td>Memo</td>
-								<td>Thaught Works Seno</td>
-								<td>75485</td>
-							</tr>
-							<tr>
-								<td><input type="checkbox"></td>
-								<td>Memo</td>
-								<td>Thaught Works Seno</td>
-								<td>75485</td>
-							</tr>
+							
 						</tbody>
 					</table>
+				</div>
 				</section>
 				<!--	left table data end-->
 
@@ -126,83 +96,88 @@
 					<div class="button-box">
 						<button class="btn btn-next">>></button>
 						<button class="btn btn-prev">
-							<< </button> 
+							<<
+						 </button> 
 					</div> 
-				</section> <!-- center exchange button end-->
+				</section>
+				 <!-- center exchange button end-->
 
 								<!--	right table data start-->
-								<section class="col-5">
-									<header class="table-heading">
-										<h3>Exceluded Seno</h3>
-									</header>
-									<table class="table">
-										<thead>
-											<tr>
-												<th></th>
-												<th>Seno</th>
-												<th>Description</th>
-												<th>Population</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><input type="checkbox"></td>
-												<td>Memo</td>
-												<td>Thaught Works Seno</td>
-												<td>75485</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox"></td>
-												<td>Memo</td>
-												<td>Thaught Works Seno</td>
-												<td>75485</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox"></td>
-												<td>Memo</td>
-												<td>Thaught Works Seno</td>
-												<td>75485</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox"></td>
-												<td>Memo</td>
-												<td>Thaught Works Seno</td>
-												<td>75485</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox"></td>
-												<td>Memo</td>
-												<td>Thaught Works Seno</td>
-												<td>75485</td>
-											</tr>
-										</tbody>
-									</table>
-								</section>
-								<!--	right table data end-->
+					<section class="col-5 seno-excluded">
+										<header class="table-heading">
+											<h3>Exceluded Seno</h3>
+										</header>
+										<div class="overflow-x-auto">
+										<table class="table">
+											<thead>
+												<tr>
+													<th></th>
+													<th>Seno</th>
+													<th>Description</th>
+													<th>Population</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>Memo</td>
+													<td>Thaught Works Seno</td>
+													<td>75485</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>Memo</td>
+													<td>Thaught Works Seno</td>
+													<td>75485</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>Memo</td>
+													<td>Thaught Works Seno</td>
+													<td>75485</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>Memo</td>
+													<td>Thaught Works Seno</td>
+													<td>75485</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>Memo</td>
+													<td>Thaught Works Seno</td>
+													<td>75485</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+					</section>
+					<!--right table data end-->
 
 					</div>
-					<!--			first row end-->
+					<!--first row end-->
 
-					<!--			generate report start-->
+					<!--generate report start-->
 					<div class="row">
 						<article class="generate-seno">
-							<form action="">
+							<form action="javascript" method="POST">
 								<input type="radio" id="customCount">
 								<label for="customCount">Coustom Count</label>
-								<button class="btn">Generate Count</button>
+								<button class="btn" data-message="This is for generate counnt button">Generate Count</button>
 							</form>
 						</article>
 					</div>
-					<!--			generate report end-->
+					<!--generate report end-->
 
 		</article>
 		<!--		data table end  -->
 
 	</main>
 
-	<script src="./js/data.js"></script>
-	<script src="./js/dom.js"></script>
-	<script src="./js/seno.js"></script>
+	<script src="./assets/js/data.js"></script>
+	<script src="./assets/js/dom.js"></script>
+	<script src="./assets/js/senoLocal.js"></script>
+	<script src="./assets/js/seno.js"></script>
 </body>
 
 </html>

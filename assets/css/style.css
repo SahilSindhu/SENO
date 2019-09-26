@@ -2,7 +2,7 @@
 
 /*container css start*/
 .container {
-	max-width: 1170px;
+	max-width: 1000px;
 	margin: 0px auto;
 	width: 100%;
 	position: relative;
@@ -43,12 +43,9 @@ header {
 }
 
 .table {
-	max-width: 400px;
 	width: 100%;
-	overflow: scroll;
 	text-transform: uppercase;
 	margin:0 auto;
-	white-space: nowrap;
 }
 
 .table thead {
